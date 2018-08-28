@@ -16,3 +16,13 @@ A catalog of all of the webapps, which is itself also a webapp.
 | Fuheng | ucsb-cs56-qrcodereader |  Read QR codes and Convert Data to QR codes  |
 | Omer | ucsb-cs56-caloriecounter | Provide intuitive platform to manage nutition  |
 | Conrad | ucsb-cs56-webapp-catalog | List all the webapps in the ucsb-cs56-webapps org  |
+
+# In each repo in this org, please create
+
+* /cs56/cs56.json
+   * { "name":"ucsb-cs56-smartplanner" , "pitch":"converting to-do list into a plan" }
+* /cs56/m18/README.md
+   * Plain text (actually Markdown format), write down your ideas in whatever form you like.
+   
+
+
