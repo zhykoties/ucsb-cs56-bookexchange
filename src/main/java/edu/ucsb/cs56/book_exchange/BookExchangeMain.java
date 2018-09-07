@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.pconrad;
+package edu.ucsb.cs56.book_exchange;
 
 import static spark.Spark.port;
 
@@ -33,11 +33,9 @@ public class BookExchangeMain {
         map.put("name", "Sam");
 
         // hello.mustache file is in resources/templates directory
-        get("/", (rq, rs) -> new ModelAndView(map, "about.mustache"), new MustacheTemplateEngine());
-
-		get("/form/student", (rq, rs) -> new ModelAndView(map, "studentForm.mustache"), new MustacheTemplateEngine());
-
-		post("/add/student", (rq, rs) -> new ModelAndView(map, "addedStudent.mustache"), new MustacheTemplateEngine());
+        get("/", (rq, rs) -> new ModelAndView(map, "hello.mustache"), new MustacheTemplateEngine());
+        get("/about", (rq, rs) -> new ModelAndView(map, "about.mustache"), new MustacheTemplateEngine());
+        get("/listings", (rq, rs) -> new ModelAndView(map, "listings.mustache"), new MustacheTemplateEngine());
 
 	}
 
