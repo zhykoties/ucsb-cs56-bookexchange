@@ -8,15 +8,15 @@
 
     <!-- project coordinates - values which uniquely identify this project -->
 
-  <groupId>edu.ucsb.cs56.pconrad</groupId>
-  <artifactId>spark-mustache-demo-02</artifactId>
+  <groupId>edu.ucsb.cs56.book_exchange</groupId>
+  <artifactId>ucsb-cs56-yunkai-08-28-18</artifactId>
   <version>1.0</version>
   <url>https://ucsb-cs56-pconrad.github.io/sparkjava-mustache-example</url>
 
   <!-- configure what mvn package produces -->
 
   <packaging>jar</packaging>
-  <name>sparkjava-mustache-example-02</name>
+  <name>ucsb-cs56-yunkai-08-28-18</name>
 
   <!-- what version of Java should we use and what encoding for files? -->
   <properties>
@@ -117,7 +117,7 @@
             <configuration>
               <archive>
                 <manifest>
-		    <mainClass>${userDefinedMainClass}</mainClass>
+		    <mainClass>edu.ucsb.cs56.book_exchange.BookExchangeMain</mainClass>
                 </manifest>
               </archive>
               <descriptorRefs>
@@ -141,7 +141,7 @@
 	  </execution>
 	</executions>
 	<configuration>
-	  <mainClass>${userDefinedMainClass}</mainClass>
+	  <mainClass>edu.ucsb.cs56.book_exchange.BookExchangeMain</mainClass>
 	</configuration>
       </plugin>
 
@@ -157,7 +157,7 @@
           <processTypes>
             <!-- Tell Heroku how to launch your application -->
             <!-- You might have to remove the ./ in front   -->
-            <web>java $JAVA_OPTS -jar target/${project.name}-${project.version}-jar-with-dependencies.jar</web>
+            <web>java $JAVA_OPTS -jar target/ucsb-cs56-yunkai-08-28-18-1.0-jar-with-dependencies.jar</web>
 
           </processTypes>
 	</configuration>

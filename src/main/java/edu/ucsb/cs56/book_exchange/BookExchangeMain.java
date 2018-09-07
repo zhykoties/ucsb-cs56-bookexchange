@@ -19,28 +19,28 @@ import static spark.Spark.post;
  *
  */
 
-public class SparkMustacheDemo02 {
+public class BookExchangeMain {
 
-	public static final String CLASSNAME="SparkMustacheDemo02";
-	
+	public static final String CLASSNAME="BookExchangeMain";
+
 	public static final Logger log = Logger.getLogger(CLASSNAME);
 
 	public static void main(String[] args) {
 
         port(getHerokuAssignedPort());
-		
+
 		Map map = new HashMap();
         map.put("name", "Sam");
-		
+
         // hello.mustache file is in resources/templates directory
-        get("/", (rq, rs) -> new ModelAndView(map, "hello.mustache"), new MustacheTemplateEngine());
+        get("/", (rq, rs) -> new ModelAndView(map, "about.mustache"), new MustacheTemplateEngine());
 
 		get("/form/student", (rq, rs) -> new ModelAndView(map, "studentForm.mustache"), new MustacheTemplateEngine());
 
 		post("/add/student", (rq, rs) -> new ModelAndView(map, "addedStudent.mustache"), new MustacheTemplateEngine());
-		
+
 	}
-	
+
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
@@ -49,5 +49,5 @@ public class SparkMustacheDemo02 {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-	
+
 }
